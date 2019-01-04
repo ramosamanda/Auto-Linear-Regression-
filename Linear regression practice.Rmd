@@ -1,6 +1,7 @@
 ---
 title: "Linear Regression Practice"
 output:
+  pdf_document: default
   html_document:
     df_print: paged
 ---
@@ -11,5 +12,10 @@ Hi
 library(ISLR)
 lm.fit = lm(mpg~horsepower,data= Auto) #lm(response~ predictor)
 summary(lm.fit)
+plot(Auto$horsepower, Auto$mpg, xlab = "horsepower", ylab= "mpg") #observations
+abline(lm.fit,lwd = 3,col ="pink") #best fit line
+```
 
+```{r}
+plot(lm.fit) #Helps you detect outliers, colinearity
 ```
