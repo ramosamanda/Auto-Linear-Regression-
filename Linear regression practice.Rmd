@@ -1,0 +1,15 @@
+---
+title: "Linear Regression Practice"
+output:
+  html_document:
+    df_print: paged
+---
+
+Hi
+
+```{r}
+library(ISLR)
+lm.fit = lm(mpg~horsepower,data= Auto) #lm(response~ predictor)
+summary(lm.fit)
+
+```
